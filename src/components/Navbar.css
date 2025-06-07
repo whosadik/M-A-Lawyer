@@ -1,0 +1,227 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  height: auto;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+  background-color: transparent;
+  color: white;
+  z-index: 99999;
+  transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
+
+.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+  color: black;
+}
+
+.navbar.scrolled .navbar__menu a {
+  color: black;
+}
+
+.navbar.scrolled .navbar__toggle div {
+  background: black;
+}
+.navbar__brand {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar.scrolled .navbar__brand {
+  color: black;
+  cursor: pointer;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+}
+
+.MA {
+  font-size: 46px;
+  font-weight: 500;
+}
+
+.assist {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.navbar__menu a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+.navbar.scrolled__menu a {
+  color: black;
+}
+.navbar.scrolled .navbar__menu a:hover {
+  color: #b69058;
+}
+
+.navbar__menu a:hover {
+  color: #d0d0d0;
+  cursor: pointer;
+}
+
+.navbar__phone {
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+}
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.navbar__toggle div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 969px) {
+  .navbar {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 0;
+    border-radius: 0 0 15px 15px;
+    margin-top: 10px;
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .navbar__menu a {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__phone {
+    display: none;
+  }
+}
+.navbar__menu a.active {
+  border-bottom: 2px solid #b69058;
+  color: #b69058;
+}
+.navbar__menu-mobile {
+  display: none;
+}
+
+/* Мобильное меню сбоку справа */
+@media (max-width: 969px) {
+  .navbar__menu {
+    display: none;
+  }
+
+  .navbar__menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 80%;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 100000;
+  }
+
+  .navbar__menu-mobile.active {
+    right: 0;
+  }
+
+  .navbar__menu-mobile a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+  }
+
+  .navbar__menu-mobile a.active {
+    color: #d5a85f;
+    font-weight: bold;
+  }
+
+  .navbar__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    color: #d5a85f;
+    cursor: pointer;
+  }
+
+  .navbar__mobile-actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-btn,
+  .whatsapp-btn {
+    background: transparent;
+    border: 1px solid #d5a85f;
+    color: #d5a85f;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .contact-btn:hover,
+  .whatsapp-btn:hover {
+    background: #d5a85f;
+    color: #0f0f0f;
+  }
+
+  .navbar__phone {
+    display: none;
+  }
+}
+.navbar__close {
+  display: none;
+}
+
+@media (max-width: 969px) {
+  .navbar__close {
+    display: block;
+  }
+}

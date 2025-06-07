@@ -1,0 +1,224 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+.main-page__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.main-page__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-page__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  z-index: 1;
+}
+
+.main-page__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 30vh;
+  padding-left: 10vw;
+  padding-right: 5vw;
+  text-align: left;
+}
+
+.main-page__title {
+  font-size: 62px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+
+.main-page__subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.main-page__cta {
+  background-color: #b69058;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 30px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.main-page__cta:hover {
+  background-color: #9e7a4f;
+}
+
+.main-page__stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(146, 146, 146, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 1rem;
+  text-align: center;
+  font-size: 18px;
+}
+
+.main-page__background-text {
+  position: absolute;
+  bottom: 9vh;
+  left: 55%;
+  transform: translateX(-50%);
+  font-size: 200px;
+  font-weight: 700;
+  color: white;
+  opacity: 0.6;
+  z-index: 0;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  font-family: "Inter", sans-serif;
+}
+
+.stat-number {
+  font-size: 62px;
+  display: block;
+}
+
+.stat-label {
+  font-size: 20px;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .main-page {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .main-page__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: flex-start; /* Оставляем выравнивание по левому краю */
+    padding: 0 24px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  .main-page__background-text {
+    display: none;
+  }
+
+  .main-page__bg img {
+    object-position: center top;
+  }
+  .main-page__title {
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-bottom: 16px;
+  }
+
+  .main-page__subtitle {
+    font-size: 15px;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  .main-page__cta {
+    font-size: 16px;
+    padding: 14px 24px;
+    background-color: #b69058;
+    border: none;
+    font-weight: 600;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  .main-page__cta:hover {
+    background-color: #9e7a4f;
+  }
+
+  .main-page__stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 12px;
+    padding: 20px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    flex-wrap: wrap;
+  }
+
+  .main-page__stats > div {
+    flex: 0 1 45%;
+    text-align: left;
+  }
+
+  .stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: #e0e0e0;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 1500px) {
+  .main-page__background-text {
+    font-size: 150px;
+    bottom: 12vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-page__background-text {
+    font-size: 120px;
+    bottom: 12vh;
+  }
+}

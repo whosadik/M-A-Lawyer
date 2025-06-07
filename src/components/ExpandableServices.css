@@ -1,0 +1,136 @@
+/* ======= SERVICES MODERN SECTION ======= */
+.services-modern {
+  background-color: rgba(248, 247, 243, 255);
+  padding: 100px 40px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.services-modern__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-modern__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-modern__header .label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #b69058;
+  background-color: #f8f4f0;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.services-modern__header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-bottom: 16px;
+}
+
+.services-modern__header p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Сетка карточек */
+.services-modern__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.services-modern__card {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.services-modern__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.services-modern__card .icon {
+  font-size: 32px;
+  color: #b69058;
+  margin-bottom: 18px;
+}
+
+.services-modern__card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 10px;
+}
+
+.services-modern__card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.details-link {
+  font-size: 15px;
+  color: #b69058;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.details-link:hover {
+  color: #a17942;
+}
+
+/* ======= АДАПТИВ ======= */
+@media (max-width: 768px) {
+  .services-modern__header h2 {
+    font-size: 28px;
+  }
+
+  .services-modern__card {
+    padding: 24px;
+  }
+
+  .services-modern__card .icon {
+    font-size: 28px;
+  }
+}
+.services-cta {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.services-button {
+  background-color: #b69058;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.services-button:hover {
+  background-color: #a67c41;
+}
